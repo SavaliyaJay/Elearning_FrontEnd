@@ -2,7 +2,11 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const Course = () => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const onSubmit = (data) => {
     console.log(data);
   };
@@ -26,13 +30,23 @@ const Course = () => {
                   name="title"
                   type="text"
                   className="block w-full px-4 py-2 mt-2 border rounded-md   focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-                //   ref={register}
-                {...register("title")}
+                  {...register("title", {
+                    required: "this field is required.",
+                    minLength: {
+                      value: 4,
+                      message: "Please Enter Username minimum 4 characters",
+                    },
+                  })}
                 />
+                {errors.title && (
+                  <span className="text-red-900">{errors.title.message}</span>
+                )}
                 {/* <span>wrong</span> */}
               </div>
               <div>
-                <label className="block text-sm font-medium ">Image</label>
+                <label className="block text-sm font-medium ">
+                  Thumbnail Image
+                </label>
                 <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-dashed rounded-md">
                   <div className="space-y-1 text-center">
                     <svg
@@ -49,26 +63,71 @@ const Course = () => {
                         strokeLinejoin="round"
                       />
                     </svg>
-                    <div className="flex text-sm text-gray-600">
-                      <label
-                        htmlFor="file-upload"
-                        className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
-                      >
-                        <span className>Upload a file</span>
-                        <input
-                          id="file-upload"
-                          name="file-upload"
-                          type="file"
-                          className="sr-only"
+                    {/* <div className="flex text-sm text-gray-600"> */}
+                    <label
+                      htmlFor="file-upload"
+                      className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
+                    >
+                      <span className>Upload a file</span>
+                      <input
+                        id="file-upload"
+                        type="file"
+                        className="sr-only"
                         //   ref={register}
-                        {...register("file-upload")}
-                        />
-                      </label>
-                      <p className="pl-1 ">or drag and drop</p>
-                    </div>
+                        {...register("fileImg", {
+                          required: "this field is required.",
+                        })}
+                      />
+                    </label>
+                    {/* </div> */}
                     <p className="text-xs ">PNG, JPG, GIF up to 10MB</p>
                   </div>
                 </div>
+                {errors.fileImg && (
+                  <span className="text-red-900">{errors.fileImg.message}</span>
+                )}
+              </div>
+              <div>
+                <label className="block text-sm font-medium ">Video</label>
+                <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-dashed rounded-md">
+                  <div className="space-y-1 text-center">
+                    <svg
+                      className="mx-auto h-12 w-12 "
+                      stroke="currentColor"
+                      fill="none"
+                      viewBox="0 0 48 48"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    {/* <div className="flex text-sm text-gray-600"> */}
+                    <label
+                      htmlFor="file-upload"
+                      className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
+                    >
+                      <span className>Upload a file</span>
+                      <input
+                        id="file-upload"
+                        type="file"
+                        className="sr-only"
+                        //   ref={register}
+                        {...register("fileVideo", {
+                          required: "this field is required.",
+                        })}
+                      />
+                    </label>
+                    {/* </div> */}
+                    <p className="text-xs ">mp3/mp4 up to 1 GB</p>
+                  </div>
+                </div>
+                {errors.fileVideo && (
+                  <span className="text-red-900">{errors.fileVideo.message}</span>
+                )}
               </div>
               <div>
                 <label htmlFor="price">Price</label>
@@ -77,8 +136,10 @@ const Course = () => {
                   name="price"
                   type="number"
                   className="block w-full px-4 py-2 mt-2 border rounded-md   focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-                //   ref={register}
-                {...register("price")}
+                  //   ref={register}
+                  {...register("price", {
+                    required: "this field is required.",
+                  })}
                 />
                 {/* <span>wrong</span> */}
               </div>
@@ -86,12 +147,16 @@ const Course = () => {
                 <label htmlFor="tutorname">Tutor Name</label>
                 <input
                   id="tutorname"
-                  name="tutorname"
                   type="text"
                   className="block w-full px-4 py-2 mt-2 border rounded-md   focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-                //   ref={register}
-                {...register("tutorname")}
+                  //   ref={register}
+                  {...register("tutorname", {
+                    required: "this field is required.",
+                  })}
                 />
+                {errors.tutorname && (
+                  <span className="text-red-900">{errors.tutorname.message}</span>
+                )}
                 {/* <span>wrong</span> */}
               </div>
             </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 
 const Registration = () => {
@@ -132,13 +133,21 @@ const Registration = () => {
                 )}
               </div>
             </div>
+            <hr className="mt-3" />
             <div className="flex justify-center mt-6">
               <button
                 type="submit"
                 className="px-3 py-2 leading-5 text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-700 focus:outline-none"
               >
-                Submit
+                Let's Go
               </button>
+            </div>
+            <div className="mt-3 text-center">
+              Already have an account?
+              <Link to="/Login" className="text-blue-500">
+                {" "}
+                Sign in
+              </Link>
             </div>
           </form>
         </section>

@@ -50,10 +50,6 @@ const SubCat = () => {
                 </section>
 
             </div>
-
-
-
-
         </>
     )
 }
