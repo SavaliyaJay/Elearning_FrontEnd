@@ -73,7 +73,6 @@ const Course = () => {
                         id="file-upload"
                         type="file"
                         className="sr-only"
-                        //   ref={register}
                         {...register("fileImg", {
                           required: "this field is required.",
                         })}
@@ -115,7 +114,6 @@ const Course = () => {
                         id="file-upload"
                         type="file"
                         className="sr-only"
-                        //   ref={register}
                         {...register("fileVideo", {
                           required: "this field is required.",
                         })}
@@ -136,7 +134,6 @@ const Course = () => {
                   name="price"
                   type="number"
                   className="block w-full px-4 py-2 mt-2 border rounded-md   focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-                  //   ref={register}
                   {...register("price", {
                     required: "this field is required.",
                   })}
@@ -149,7 +146,6 @@ const Course = () => {
                   id="tutorname"
                   type="text"
                   className="block w-full px-4 py-2 mt-2 border rounded-md   focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-                  //   ref={register}
                   {...register("tutorname", {
                     required: "this field is required.",
                   })}
