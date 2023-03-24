@@ -11,7 +11,7 @@ const Login = () => {
   const onSubmit = (data) => console.log(data);
   return (
     <>
-      <div className="mt-10">
+      <div className="mt-10 mb-10">
         <section className="max-w-4xl p-6 mx-auto rounded-md shadow hover:shadow-lg">
           <h1 className="text-xl font-bold capitalize dark: text-center mb-1">
             Login Here!
