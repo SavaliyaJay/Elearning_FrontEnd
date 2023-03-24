@@ -22,7 +22,7 @@ const Login = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
               <div>
-                <label htmlFor="emailAddress">Email Address</label>
+                <label htmlFor="emailAddress">Email Addresss</label>
                 <input
                   id="emailAddress"
                   type="email"
