@@ -5,8 +5,8 @@ import Product from "./Product";
 const Products = () => {
   return (
     <>
-      <div className="flex flex-wrap p-5 items-center justify-center font-bold ">
-        This Are Best Prodact
+      <div className="flex flex-wrap p-5 items-center justify-center font-bold text-3xl mt-10">
+        This are Best Prodact
       </div>
       <div className="flex flex-wrap p-5 items-center justify-center">
         {ApiTopPropduct.map((product, index) => (
