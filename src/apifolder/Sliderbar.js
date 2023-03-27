@@ -2,7 +2,7 @@
 
 const Sliderbar =  [
     {
-        src: "assets/19.jpeg",
+        src: "../assets/slider/19.jpeg",
         content: {
             h2: "Img1",
             p: "image1"
@@ -10,7 +10,7 @@ const Sliderbar =  [
     },
     
     {
-        src: "assets/20.jpg",
+        src: "../assets/slider/20.jpg",
         content: {
             h2: "Img2",
             p: "image2"
@@ -18,7 +18,7 @@ const Sliderbar =  [
     },
     
     {
-        src: "assets/21.jpeg",
+        src: "../assets/slider/21.jpeg",
         content: {
             h2: "Img3",
             p: "image3"
