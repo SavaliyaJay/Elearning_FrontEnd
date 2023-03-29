@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import Tutor_Content from "./Tutor/Tutor_Content";
 // import Tutor_Content_video from "./Tutor/Tutor_Content_video";
 // import Tutor_Content_description from "./Tutor/Tutor_Content_description";
 // import Tutor_Content_title from "./Tutor/Tutor_Content_title";
 // import Tutor_Course from "./Tutor/Tutor_Cou";
 // import Tutor_Topic from "./Tutor/Tutor_topic";
-import Tutor_Subtopic from './Tutor/Tutor_Subtopic';
+// import Tutor_Subtopic from './Tutor/Tutor_Subtopic';
 
 const Course = () => {
   const [shown, setshown] = useState(false);
@@ -31,7 +32,8 @@ const Course = () => {
         <div className="mt-10 ml-10">
           {
             // eslint-disable-next-line
-            <Tutor_Subtopic />
+            <Tutor_Content/>
+            // <Tutor_Subtopic />
             // <Tutor_Topic />
             // <Tutor_Course />
             // <Tutor_Content_video />
