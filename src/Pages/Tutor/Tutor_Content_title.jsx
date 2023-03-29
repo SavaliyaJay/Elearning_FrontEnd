@@ -2,14 +2,15 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 
 
-const Tutor_Course = () => {
+const Tutor_Course_title = () => {
     const {
         register,
         handleSubmit,
         formState: { errors },
       } = useForm();
       const onSubmit = (data) => {
-        console.log(data);
+        const newdata = {content: {title : data.title}}
+        console.log(newdata);
       };
   return (
     <>
@@ -19,13 +20,13 @@ const Tutor_Course = () => {
           Account settings
         </h1>
         <h2 className="text-sm text-center capitalize dark:">
-          This is Course Form!
+          {`This is Course > Topic > SubTopic > Title Form!`}
         </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-1">
 
           <div>
-                <label htmlFor="coursename">Course Name</label>
+                <label htmlFor="coursename">Title in Sub Topic</label>
                 <input
                   id="coursename"
                   name="title"
@@ -61,4 +62,4 @@ const Tutor_Course = () => {
   )
 }
 
-export default Tutor_Course
+export default Tutor_Course_title
