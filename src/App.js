@@ -8,6 +8,7 @@ import Login from './Pages/Login';
 import Registration from './Pages/Registration';
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import Footer from './components/Footer';
+import ProductPage from './Pages/User/ProductPage';
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
             <Route exact path="/ContactUs" element={<ContactUs />}></Route>
             <Route exact path="/Login" element={<Login />}></Route>
             <Route exact path="/Registration" element={<Registration />}></Route>
+            <Route exact path="/ProductPage" element={<ProductPage/>}></Route>
+            
           </Routes>
           <Footer />
         </Router>
