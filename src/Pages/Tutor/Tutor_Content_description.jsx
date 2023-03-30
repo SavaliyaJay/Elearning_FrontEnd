@@ -16,7 +16,7 @@ const Tutor_Content_description = () => {
       <div className="mt-10">
         <section className="max-w-4xl p-6 mx-auto rounded-md shadow hover:shadow-lg">
           <h1 className="text-xl font-bold capitalize dark: text-center mb-1">
-            Add Course Here!
+          Sub Topic settings
           </h1>
           <h2 className="text-xl capitalize dark: text-center mb-5">
           {`This is Course > Topic > SubTopic > Description Form!`}

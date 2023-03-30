@@ -17,9 +17,9 @@ const Tutor_Course_title = () => {
     <div>
       <section className="max-w-4xl p-6 mx-auto rounded-md shadow hover:shadow-lg">
         <h1 className="text-xl text-center font-bold capitalize dark:">
-          Account settings
+        Sub Topic settings
         </h1>
-        <h2 className="text-sm text-center capitalize dark:">
+        <h2 className="text-xl text-center capitalize dark:">
           {`This is Course > Topic > SubTopic > Title Form!`}
         </h2>
         <form onSubmit={handleSubmit(onSubmit)}>

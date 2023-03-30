@@ -20,6 +20,9 @@ const Tutor_Content = () => {
   // title
   const handleShowtit = (event) => {
     setshowntit((current) => !current);
+    setshowndec((current) => current=false);
+    setshownvid((current) => current=false);
+
     if (showntit === true) {
       setupdtxttit("Add A Title");
     } else {
@@ -32,6 +35,9 @@ const Tutor_Content = () => {
   //   description
   const handleShowdec = (event) => {
     setshowndec((current) => !current);
+    setshowntit((current) => current=false);
+    setshownvid((current) => current=false);
+
     if (showndec === true) {
       setupdtxtdec("Add A Description");
     } else {
@@ -44,6 +50,9 @@ const Tutor_Content = () => {
   //   video
   const handleShowvid = (event) => {
     setshownvid((current) => !current);
+    setshowndec((current) => current=false);
+    setshowntit((current) => current=false);
+
     if (shownvid === true) {
       setupdtxtvid("Add A Video");
     } else {
