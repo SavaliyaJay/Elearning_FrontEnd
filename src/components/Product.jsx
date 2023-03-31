@@ -19,6 +19,9 @@ const Product = ({ item }) => {
   function handleHoverExit() {
     setHoverEffects(" opacity-0");
   }
+
+  
+
   return (
     <>
       <div style={{ width: "23rem" }}>
@@ -43,7 +46,7 @@ const Product = ({ item }) => {
               </div>
               <div className={iconStyle}>
                 <Link to="/ProductPage">
-                  <SearchOutlined />c
+                  <SearchOutlined />
                 </Link>
               </div>
             </div>
