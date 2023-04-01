@@ -76,6 +76,7 @@ function ProductPage() {
           </div>
           {/* end leftsidebar  */}
 
+          {/* box  */}
           {/* <div className="p-10 bg-black w-full text-slate-100">{boxContent}</div> */}
           <div className="p-10 bg-black w-full text-slate-100">
             {<ContentOnBox />}
