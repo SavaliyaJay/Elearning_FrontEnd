@@ -1,23 +1,25 @@
-import { ExpandLess, ExpandMore } from "@material-ui/icons";
-import React, { useState } from "react";
+// import { ExpandLess, ExpandMore } from "@material-ui/icons";
+import React from "react";
+// import BoxContent from './BoxContent';
+import ContentOnBox from './ContentOnBox';
 
-function Course() {
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-  const [boxContent, setBoxContent] = useState("Nothing is here");
+function ProductPage() {
+  // const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  // const [boxContent, setBoxContent] = useState("Nothing is here");
 
-  function toggleSubMenu() {
-    setIsSubMenuOpen(!isSubMenuOpen);
-  }
+  // function toggleSubMenu() {
+  //   setIsSubMenuOpen(!isSubMenuOpen);
+  // }
 
-  function handleClick(option) {
-    if (option === "Social") {
-      setBoxContent("Social content");
-    } else if (option === "Personal") {
-      setBoxContent("Personal content");
-    } else if (option === "Friends") {
-      setBoxContent("Friends content");
-    }
-  }
+  // function handleClick(option) {
+  //   if (option === "Social") {
+  //     setBoxContent("Social content");
+  //   } else if (option === "Personal") {
+  //     setBoxContent("Personal content");
+  //   } else if (option === "Friends") {
+  //     setBoxContent("Friends content");
+  //   }
+  // }
 
   return (
     <>
@@ -35,50 +37,54 @@ function Course() {
 
               <div
                 className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
-                onClick={toggleSubMenu}
+                // onClick={toggleSubMenu}
               >
                 <div className="flex justify-between w-full items-center">
                   <span className="text-[15px] ml-4 text-gray-200 font-bold">
                     Chatbox
                   </span>
-                  {isSubMenuOpen ? <ExpandLess /> : <ExpandMore />}
+                  {/* {isSubMenuOpen ? <ExpandLess /> : <ExpandMore />} */}
                 </div>
               </div>
-              <div
-                className={`text-left text-sm mt-2 w-4/5 mx-auto text-gray-200 font-bold ${
-                  isSubMenuOpen ? "" : "hidden"
-                }`}
+              {/* <div
+                className={`text-left text-sm mt-2 w-4/5 mx-auto text-gray-200 font-bold `}
+                // ${
+                //   // isSubMenuOpen ? "" : "hidden"
+                // }
                 id="submenu"
               >
                 <h1
                   className="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1"
-                  onClick={() => handleClick("Social")}
+                  // onClick={() => handleClick("Social")}
                 >
                   Social
                 </h1>
                 <h1
                   className="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1"
-                  onClick={() => handleClick("Personal")}
+                  // onClick={() => handleClick("Personal")}
                 >
                   Personal
                 </h1>
                 <h1
                   className="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1"
-                  onClick={() => handleClick("Friends")}
+                  // onClick={() => handleClick("Friends")}
                 >
                   Friends
                 </h1>
-              </div>
+              </div> */}
             </div>
           </div>
           {/* end leftsidebar  */}
 
           {/* box  */}
-          <div className="p-10 bg-black w-full text-slate-100">{boxContent}</div>
+          {/* <div className="p-10 bg-black w-full text-slate-100">{boxContent}</div> */}
+          <div className="p-10 bg-black w-full text-slate-100">
+            {<ContentOnBox />}
+          </div>
         </div>
       </div>
     </>
   );
 }
 
-export default Course;
+export default ProductPage;
